@@ -5,8 +5,16 @@ export type Answers = {
   correct: boolean
 }
 
-export type Questions = {
+export interface Questions {
   id: UniqueId,
   question: string,
   answers: Answers[]
+}
+
+export interface QuestionsProps extends Questions {
+  setQuestionsNumber: React.Dispatch<React.SetStateAction<number>>
+}
+
+export interface AnswersProps extends Answers {
+  onSelectAnswer: (answer: Answers) => void
 }

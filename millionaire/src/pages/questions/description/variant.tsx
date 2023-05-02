@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
-import { Answers } from '../../../utils/types'
+import { AnswersProps } from '../../../utils/types'
 
-const Variant: FC<Answers> = ({ text, correct}) => {
+const Variant: FC<AnswersProps> = ({ text, correct, onSelectAnswer}) => {
   return (
     <div>{text}</div>
   )

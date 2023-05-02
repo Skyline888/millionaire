@@ -7,7 +7,7 @@ import { Questions } from '../../utils/types';
 
 
 const Question: FC = () => {
-  const [questionsNumber, setQuestionsNumber] = useState(1)
+  const [questionsNumber, setQuestionsNumber] = useState(2)
   const [question, setQuestion] = useState<Questions>()
 
 
@@ -19,8 +19,8 @@ const Question: FC = () => {
 
   return (
     <div className="questions">
-      { question && (
-        <Description {...question} />
+      {question && (
+        <Description {...question} setQuestionsNumber={setQuestionsNumber} />
       )}
       <Progress questionsNumber={questionsNumber} />
     </div>
