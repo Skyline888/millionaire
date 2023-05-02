@@ -1,0 +1,15 @@
+.progress {
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../images/main-background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    padding: 10% 5%;
+    box-sizing: border-box;
+}

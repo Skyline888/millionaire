@@ -1,0 +1,14 @@
+.description {
+    width: 75%;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../images/main.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+    box-sizing: border-box;
+}
