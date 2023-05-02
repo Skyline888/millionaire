@@ -1,8 +1,9 @@
 import React, { FC } from 'react'
+import { Answers } from '../../../utils/types'
 
-const Variant: FC = () => {
+const Variant: FC<Answers> = ({ text, correct}) => {
   return (
-    <div>item</div>
+    <div>{text}</div>
   )
 }
 

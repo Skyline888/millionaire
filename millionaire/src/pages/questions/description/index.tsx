@@ -1,18 +1,16 @@
 import React, { FC } from 'react';
 import Variant from './variant';
 import './description.css';
+import { Questions } from '../../../utils/types';
 
-interface DescriptionType {
-  questions: string;
-}
+const Description: FC<Questions> = ({ question, answers }) => {
 
-const Description: FC<DescriptionType> = ({ questions }) => {
   return (
     <div className="description">
-      <div>{questions}</div>
+      <div>{question}</div>
       <div>
-        {[].map((variant) => (
-          <Variant />
+        {answers.map((answer) => (
+          <Variant text={answer.text} correct={answer.correct} />
         ))}
       </div> 
     </div>
