@@ -16,7 +16,7 @@ const Description: FC<QuestionsProps> = ({ question, answers, setQuestionsNumber
   const [wrongAnswer] = useSound(wrong);
 
   useEffect(() => {
-    letsPlay();
+    // letsPlay();
   }, [letsPlay]);
 
   const onSelectAnswer = useCallback((answer: Answers) => {
@@ -28,12 +28,12 @@ const Description: FC<QuestionsProps> = ({ question, answers, setQuestionsNumber
 
     getDelay(5000, () => {
       if(answer.correct) {
-        correctAnswer();
+        // correctAnswer();
         getDelay(1000, () => {
           setQuestionsNumber((prev) => prev + 1)
         })
       } else {
-        wrongAnswer();
+        // wrongAnswer();
       }
     })
   }, [correctAnswer, setQuestionsNumber, wrongAnswer])
@@ -41,10 +41,10 @@ const Description: FC<QuestionsProps> = ({ question, answers, setQuestionsNumber
   return (
     <div className="description">
       <div>{question}</div>
-      <div>
-        {answers.map((answer) => (
+      <div className="answer-section">
+        {answers.map((answer, index) => (
           <div className={selectAnswer === answer ? answerState : "awswer" }>
-            <Variant text={answer.text} correct={answer.correct} onSelectAnswer={onSelectAnswer} />
+            <Variant index={index} text={answer.text} correct={answer.correct} onSelectAnswer={onSelectAnswer} />
           </div>
           
         ))}

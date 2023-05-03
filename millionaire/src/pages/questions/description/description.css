@@ -1,15 +1,80 @@
 .description {
-    width: 75%;
+    width: calc(100vw - 380px);
     height: 100vh;
     overflow: auto;
-    display: flex;
+    display: grid;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-image: url('../../../images/main.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: white;
+    background-color: #F5F5F7;
     box-sizing: border-box;
+    padding: 133px 80px;
 }
+
+.answer-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 34px;
+    row-gap: 32px;
+}
+
+.variant-block {
+    position: relative;
+    width: 389px;
+    height: 72px;
+}
+
+.variant-block::after {
+    content: "";
+    position: absolute;
+    left: -17px;;
+    top: calc(50% - 1px);
+    width: 17px;
+    height: 1px;
+    background:  #D0D0D8;
+}
+
+.variant-block::before {
+    content: "";
+    position: absolute;
+    right: -17px;
+    top: calc(50% - 1px);
+    width: 17px;
+    height: 1px;
+    background:  #D0D0D8;
+}
+
+.variant-block svg {
+    width: 389px;
+    height: 72px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.variant-block svg path {
+    fill: white;
+    stroke: #D0D0D8;
+}
+
+.variant {
+    position: relative;
+    color: #3891B1;
+    width: 389px;
+    height: 72px;
+    font-size: 20px;
+    text-align: left;
+    line-height: 72px;
+    padding: 0 32px;
+}
+
+.variant-order {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 72px;
+    color: #004974;
+    margin-right: 8px;
+}
+

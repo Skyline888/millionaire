@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { getMoneyFromNumber } from 'utils/functions';
 
 interface MoneyProps {
   active: boolean;
@@ -7,7 +8,10 @@ interface MoneyProps {
 
 const Money: FC<MoneyProps> = ({active, value }) => {
   return (
-    <div className={!!active ? "money-item active" : "money-item"}>{value}</div>
+    <div className={!!active ? "money-block active" : "money-block"}>
+      <div className={!!active ? "money-item active" : "money-item"}>{getMoneyFromNumber(value)}</div>
+    </div>
+    
   )
 }
 

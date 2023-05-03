@@ -11,13 +11,11 @@ interface ProgressProps {
 const Progress: FC<ProgressProps> = ({ questionsNumber }) => {
   return (
     <div className="progress">
-      <div>
-        {[...prices]
-          .reverse()
-          .map((variant) => (
-          <Money key={variant.id} active={questionsNumber === variant.id} value={variant.value}/>
-        ))}
-      </div> 
+      {[...prices]
+        .reverse()
+        .map((variant) => (
+        <Money key={variant.id} active={questionsNumber === variant.id} value={variant.value}/>
+      ))}
     </div>
   )
 }

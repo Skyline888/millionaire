@@ -1,5 +1,10 @@
 type UniqueId = number;
 
+export enum LayoutType {
+  MAIN = 'main',
+  FINAL = 'final',
+}
+
 export type Answers = {
   text: string,
   correct: boolean
@@ -16,5 +21,13 @@ export interface QuestionsProps extends Questions {
 }
 
 export interface AnswersProps extends Answers {
-  onSelectAnswer: (answer: Answers) => void
+  onSelectAnswer: (answer: Answers) => void,
+  index: number
+}
+
+export interface LayoutProps {
+  buttonText: string,
+  type: LayoutType,
+  goTo: string,
+  money?: number
 }
