@@ -1,33 +1,33 @@
 [
-    {"id": 1, "question": " Яка станція метро в столиці України знаходиться на глибині 105 м під землею і є найглибшою в світі?", "answers": [
+    {"id": 1, "question": "Який український літак є найбільшим на планеті?", "answers": [
+        { "order": "A", "text": "АН-124 «Руслан»", "correct": false },
+        { "order": "B", "text": "Ан-22 «Антей»", "correct": false },
+        { "order": "C", "text": "АН-225 «Мрія»", "correct": true },
+        { "order": "D", "text": "Ан-26Б «Циклон»", "correct": false }
+    ]},
+    {"id": 2, "question": "Найдовша річка України?", "answers": [
+        { "order": "A", "text": "Дністер", "correct": false },
+        { "order": "B", "text": "Дунай", "correct": false },
+        { "order": "C", "text": "Дніпро", "correct": true},
+        { "order": "D", "text": "Десна", "correct": false }
+    ]},
+    {"id": 3, "question": " Яка станція метро в столиці України знаходиться на глибині 105 м під землею і є найглибшою в світі?", "answers": [
         { "order": "A", "text": "Хрещатик", "correct": false },
         { "order": "B", "text": "Арсенальна", "correct": true },
         { "order": "C", "text": "Лук'янівська", "correct": false },
         { "order": "D", "text": "Театральна", "correct": false }
     ]},
-    {"id": 2, "question": "Рослина, що квітне лише в народних легендах?", "answers": [
-        { "order": "A", "text": "Шафран", "correct": false  },
-        { "order": "B", "text": "Конвалія", "correct": false },
-        { "order": "C", "text": "Папороть", "correct": true },
-        { "order": "D", "text": "Каштан", "correct": false }
+    {"id": 4, "question": "Яке місце у світовому рейтингу має Україна з виробництва меду на одну людину?", "answers": [
+        { "order": "A", "text": "4", "correct": false},
+        { "order": "B", "text": "15", "correct": false },
+        { "order": "C", "text": "21", "correct": false },
+        { "order": "D", "text": "1", "correct": true }
     ]},
-    {"id": 3, "question": "Скільки разів з часів незалежності Україна вигравала в пісенному конкурсі Євробачення?", "answers": [
+    {"id": 5, "question": "Скільки разів з часів незалежності Україна вигравала в пісенному конкурсі Євробачення?", "answers": [
         { "order": "A", "text": "1", "correct": false },
         { "order": "B", "text": "2", "correct": true },
         { "order": "C", "text": "3", "correct": false },
         { "order": "D", "text": "4", "correct": false }
-    ]},
-    {"id": 4, "question": "Яке місце посідає Україна у світі за кількістю людей з вищою освітою?", "answers": [
-        { "order": "A", "text": "4", "correct": true },
-        { "order": "B", "text": "28", "correct": false },
-        { "order": "C", "text": "11", "correct": false },
-        { "order": "D", "text": "20", "correct": false }
-    ]},
-    {"id": 5, "question": "Найдовша річка України?", "answers": [
-        { "order": "A", "text": "Дністер", "correct": false },
-        { "order": "B", "text": "Дунай", "correct": false },
-        { "order": "C", "text": "Дніпро", "correct": true},
-        { "order": "D", "text": "Десна", "correct": false }
     ]},
     {"id": 6, "question": "Який український музичний інструмент є найдовшим у світі?", "answers": [
         { "order": "A", "text": "Бугай", "correct": false },
@@ -35,40 +35,40 @@
         { "order": "C", "text": "Трембіта", "correct": true },
         { "order": "D", "text": "Сурма", "correct": false }
     ]},
-    {"id": 7, "question": "Яке з цих озер знаходиться в Карпатах?", "answers": [
+    {"id": 7, "question": "Яке місце посідає Україна у світі за кількістю людей з вищою освітою?", "answers": [
+        { "order": "A", "text": "4", "correct": true },
+        { "order": "B", "text": "28", "correct": false },
+        { "order": "C", "text": "11", "correct": false },
+        { "order": "D", "text": "20", "correct": false }
+    ]},
+    {"id": 8, "question": "Яке з цих озер знаходиться в Карпатах?", "answers": [
         { "order": "A", "text": "Шелехівське озеро", "correct": false },
         { "order": "B", "text": "Синевир", "correct": true },
         { "order": "C", "text": "Біле озеро", "correct": false },
         { "order": "D", "text": "Турське озеро", "correct": false }
     ]},
-    {"id": 8, "questions": "Символи гетьманської влади в Україні у XV—XVIII століттях...?", "answers": [
-        { "order": "A", "text": "Корона", "correct": false},
-        { "order": "B", "text": "Держава", "correct": false },
-        { "order": "C", "text": "Клейноди +", "correct": true },
-        { "order": "D", "text": "Військо", "correct": false }
-    ]},
-    {"id": 9, "questions": "У якому році всесвітньовідоме видання The New York Times назвало українську вишивку головним трендом літнього сезону?", "answers": [
-        { "order": "A", "text": "2017", "correct": false },
-        { "order": "B", "text": "2012", "correct": false },
-        { "order": "C", "text": "2016 +", "correct": true },
-        { "order": "D", "text": "2014", "correct": false }
-    ]},
-    {"id": 10, "questions": "Яке місце у світовому рейтингу має Україна з виробництва меду на одну людину?", "answers": [
-        { "order": "A", "text": "4", "correct": false},
-        { "order": "B", "text": "15", "correct": false },
-        { "order": "C", "text": "21", "correct": false },
-        { "order": "D", "text": "1", "correct": true }
-    ]},
-    {"id": 11, "question": "Якої корисної копалини в Україні найбільші запаси в світі?", "answers": [
+    {"id": 9, "question": "Якої корисної копалини в Україні найбільші запаси в світі?", "answers": [
         { "order": "A", "text": "Марганець", "correct": true },
         { "order": "B", "text": "Мідь", "correct": false },
         { "order": "C", "text": "Алюміній", "correct": false },
         { "order": "D", "text": "Ртуть", "correct": false }
     ]},
-    {"id": 12, "question": "Який український літак є найбільшим на планеті?", "answers": [
-        { "order": "A", "text": "АН-124 «Руслан»", "correct": false },
-        { "order": "B", "text": "Ан-22 «Антей»", "correct": false },
-        { "order": "C", "text": "АН-225 «Мрія»", "correct": true },
-        { "order": "D", "text": "Ан-26Б «Циклон»", "correct": false }
+    {"id": 10, "question": "В якому районі країни знаходиться географічний центр Європи?", "answers": [
+        { "order": "A", "text": "Рогатинський", "correct": false },
+        { "order": "B", "text": "Тячівський", "correct": false },
+        { "order": "C", "text": "Верховинський", "correct": false },
+        { "order": "D", "text": "Рахівський", "correct": true }
+    ]},
+    {"id": 11, "question": "Символи гетьманської влади в Україні у XV—XVIII століттях...?", "answers": [
+        { "order": "A", "text": "Корона", "correct": false},
+        { "order": "B", "text": "Держава", "correct": false },
+        { "order": "C", "text": "Клейноди", "correct": true },
+        { "order": "D", "text": "Військо", "correct": false }
+    ]},
+    {"id": 12, "question": "У якому році всесвітньовідоме видання The New York Times назвало українську вишивку головним трендом літнього сезону?", "answers": [
+        { "order": "A", "text": "2017", "correct": false },
+        { "order": "B", "text": "2012", "correct": false },
+        { "order": "C", "text": "2016", "correct": true },
+        { "order": "D", "text": "2014", "correct": false }
     ]}
 ]

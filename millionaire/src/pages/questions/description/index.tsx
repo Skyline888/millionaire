@@ -27,7 +27,7 @@ const Description: FC<QuestionsProps> = ({ id, question, answers, setQuestionsNu
   }, [])
 
   useEffect(() => {
-    // letsPlay();
+    letsPlay();
     return () => updateInitialState();
   }, [letsPlay, updateInitialState]);
 
