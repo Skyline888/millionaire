@@ -1,18 +1,19 @@
-import React, { FC } from 'react'
-import { getMoneyFromNumber } from 'utils/functions';
+import { FC } from 'react';
+import { getMoneyClass, getMoneyFromNumber } from 'utils/functions';
+import { MoneyProps } from 'utils/types';
+import { ReactComponent as MoneyIcon } from '../../../images/Rectangle.svg';
 
-interface MoneyProps {
-  active: boolean;
-  value: number;
+const Money: FC<MoneyProps> = ({questionsNumber, value, id })  => {
+
+    return (
+      <div className={getMoneyClass(questionsNumber, id)}>
+        <div className="money-item">
+          {getMoneyFromNumber(value)}
+          <MoneyIcon />
+        </div>
+      </div>
+    )
+  
 }
 
-const Money: FC<MoneyProps> = ({active, value }) => {
-  return (
-    <div className={!!active ? "money-block active" : "money-block"}>
-      <div className={!!active ? "money-item active" : "money-item"}>{getMoneyFromNumber(value)}</div>
-    </div>
-    
-  )
-}
-
-export default Money
+export default Money;

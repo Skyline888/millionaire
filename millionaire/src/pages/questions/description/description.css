@@ -2,8 +2,8 @@
     width: calc(100vw - 380px);
     height: 100vh;
     overflow: auto;
-    display: grid;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #F5F5F7;
@@ -11,21 +11,32 @@
     padding: 133px 80px;
 }
 
+.question-title {
+    width: 100%;
+    height: calc(100% - 176px);
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 34px;
+    color: #1C1C21;
+}
+
 .answer-section {
     width: 100%;
+    max-width: 810px;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 34px;
     row-gap: 32px;
 }
 
-.variant-block {
+.answers-block {
     position: relative;
     width: 389px;
     height: 72px;
 }
 
-.variant-block::after {
+.answers-block::after {
     content: "";
     position: absolute;
     left: -17px;;
@@ -35,7 +46,7 @@
     background:  #D0D0D8;
 }
 
-.variant-block::before {
+.answers-block::before {
     content: "";
     position: absolute;
     right: -17px;
@@ -45,7 +56,7 @@
     background:  #D0D0D8;
 }
 
-.variant-block svg {
+.answers-block svg {
     width: 389px;
     height: 72px;
     position: absolute;
@@ -53,12 +64,12 @@
     top: 0;
 }
 
-.variant-block svg path {
+.answers-block svg path {
     fill: white;
     stroke: #D0D0D8;
 }
 
-.variant {
+.answers-text {
     position: relative;
     color: #3891B1;
     width: 389px;
@@ -69,12 +80,131 @@
     padding: 0 32px;
 }
 
-.variant-order {
+.answers-order {
     display: inline-block;
     font-weight: 600;
     font-size: 20px;
     line-height: 72px;
     color: #004974;
     margin-right: 8px;
+}
+
+.active .answers-block svg path,
+.active .answers-text,
+.active .answers-order {
+    fill: #3891B1;;
+    stroke: #D0D0D8;
+    color: white;
+}
+
+.incorrect .answers-text,
+.incorrect .answers-order,
+.correct .answers-text,
+.correct .answers-order {
+    color: white;
+}
+
+.correct .answers-block svg path {
+    animation: correct 2s ease forwards;
+}
+
+.incorrect .answers-block svg path {
+    animation: incorrect 2s ease forwards;
+}
+
+@keyframes correct {
+    0%, 22%, 42% {
+        fill: white;
+        stroke: #D0D0D8;
+    }
+
+    20%, 40%, 60% {
+        fill: #D0D0D8;
+        stroke: white;
+    }
+
+    62%, 100% {
+        fill: green;
+    }
+    
+}
+
+@keyframes incorrect {
+    0%, 22%, 42% {
+        fill: white;
+        stroke: #D0D0D8;
+    }
+
+    20%, 40%, 60% {
+        fill: #D0D0D8;
+        stroke: white;
+    }
+
+    62%, 100% {
+        fill: red;
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    .description {
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .question-title {
+        display: flex;
+        justify-items: stretch;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: calc(100vh - 348px);
+        padding: 34px 16px;
+        font-weight: 700;
+        font-size: 20px;
+        color: #1C1C21;
+    }
+
+    .answer-section {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+    }
+
+    .answers-block, .answers-block svg {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .answers-block, .answers-block svg  {
+        width: 288px;
+        height: 56px;
+    }
+
+    .answers-text, .answers-order {
+        font-size: 14px;
+        line-height: 56px;
+        display: inline-block;
+    }
+
+    .answers-text {
+        color: #1C1C21;
+    }
+
+    .answers-order {
+        color: #3891B1
+    }
+
+    .answers-block::before {
+        width: calc(50vw - 144px);
+        right: calc(-50vw + 144px)
+    }
+
+    .answers-block::after {
+        width: calc(50vw - 144px);
+        left: calc(-50vw + 144px)
+    }
 }
 

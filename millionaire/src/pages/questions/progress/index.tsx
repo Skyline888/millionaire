@@ -1,20 +1,16 @@
 import React, { FC } from 'react'
-import Money from './money'
 import './progress.css';
 import prices from '../../../utils/questions_price.json';
-
-interface ProgressProps {
-  questionsNumber: number
-}
-
+import Money from './money';
+import { ProgressProps } from 'utils/types';
 
 const Progress: FC<ProgressProps> = ({ questionsNumber }) => {
   return (
     <div className="progress">
       {[...prices]
         .reverse()
-        .map((variant) => (
-        <Money key={variant.id} active={questionsNumber === variant.id} value={variant.value}/>
+        .map((price) => (
+        <Money key={price.id} questionsNumber={questionsNumber} value={price.value} id={price.id} />
       ))}
     </div>
   )

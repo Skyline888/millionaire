@@ -17,6 +17,20 @@
     position: relative;
 }
 
+.money-block svg {
+    width: 240px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.money-block svg path {
+    fill: white;
+    stroke: #D0D0D8;
+}
+
 .money-item {
     width: 100%;
     max-width: 240px;
@@ -28,19 +42,9 @@
     margin-right: auto;
     margin-bottom: 8px;
     color: #1C1C21;
-    background-image: url('../../../images/Rectangle.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: white;
     text-align: center;
     position: relative;
     z-index: 100;
-}
-
-.money-item.active {
-    color: white;
-    background-image: url('../../../images/RectangleActive.svg');
 }
 
 .money-block::before {
@@ -53,6 +57,36 @@
     background:  #D0D0D8;
 }
 
-.money-block.active::before {
-    background:  #3891B1;
+.money-block.active .money-item {
+    color: white
 }
+
+.money-block.active::before, 
+.money-block.active svg path {
+    background:  #3891B1;
+    fill: #3891B1;
+    stroke: #3891B1;
+}
+
+.money-block.disable .money-item {
+    color: #D0D0D8
+}
+
+@media (max-width: 768px) {
+    .progress {
+        max-width: 100%;
+        height: calc(100vh - 68px);
+        background: #F5F5F7;
+    }
+
+    .money-block.active svg path {
+        background: white;
+        fill: white;
+        stroke: #3891B1;
+    }
+
+    .money-block.active .money-item {
+        color: #3891B1;
+    }
+}
+

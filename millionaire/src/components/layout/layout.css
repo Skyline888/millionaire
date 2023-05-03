@@ -66,3 +66,43 @@
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .layout-page {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .layout-image-block {
+        width: 100%;
+        margin-bottom: 42px;
+    }
+
+    .info-title {
+        max-width: 100%;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .info-button {
+        width: 100%;
+        height: 48px;
+        line-height: 48px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+
+    .info-score {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .info-money {
+        font-weight: 600;
+        font-size: 32px;
+    }
+
+    .info {
+        width: 100%;
+    }
+}

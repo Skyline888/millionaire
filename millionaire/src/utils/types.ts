@@ -1,11 +1,20 @@
 type UniqueId = number;
 
+type Order = "A" | "B" | "C" | "D";
+
+export enum MoneyType {
+  DEFAULT = 'default',
+  ACTIVE = 'active',
+  DISABLE = 'disable'
+}
+
 export enum LayoutType {
   MAIN = 'main',
   FINAL = 'final',
 }
 
 export type Answers = {
+  order?: Order,
   text: string,
   correct: boolean
 }
@@ -22,7 +31,11 @@ export interface QuestionsProps extends Questions {
 
 export interface AnswersProps extends Answers {
   onSelectAnswer: (answer: Answers) => void,
-  index: number
+  answerState: string
+}
+
+export interface ProgressProps {
+  questionsNumber: number
 }
 
 export interface LayoutProps {
@@ -30,4 +43,10 @@ export interface LayoutProps {
   type: LayoutType,
   goTo: string,
   money?: number
+}
+
+export interface MoneyProps {
+  id: number,
+  questionsNumber: number,
+  value: number
 }

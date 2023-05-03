@@ -4,11 +4,11 @@ export const getDelay = (duration: number, callBack: () => void) => {
     }, duration)
 }
 
-export const getMoneyFromNumber = (num: number) => {
-    return '$' + num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+export const getMoneyFromNumber = (num: number | string) => {
+    return '$' + Number(num).toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }
 
-export const geVariantOrder = (index: number) => {
+export const getVariantOrder = (index: number) => {
     switch (index) {
         case 0:
           return "A";
@@ -22,4 +22,16 @@ export const geVariantOrder = (index: number) => {
           return "A";
       }
 }
+
+export const getMoneyClass = (questionsNumber: number, id: number) => {
+    if (questionsNumber === id) {
+        return ("money-block active")
+    }
+
+    if (questionsNumber >= id) {
+      return ("money-block disable")
+    }
+  
+    return ("money-block");
+};
 
