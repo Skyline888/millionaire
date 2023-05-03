@@ -1,19 +1,15 @@
-import { FC } from 'react';
-import { getMoneyClass, getMoneyFromNumber } from 'utils/functions';
-import { MoneyProps } from 'utils/types';
-import { ReactComponent as MoneyIcon } from '../../../images/Rectangle.svg';
+import React, { FC } from "react";
 
-const Money: FC<MoneyProps> = ({questionsNumber, value, id })  => {
+import { getMoneyClass, getMoneyFromNumber } from "utils/functions";
+import { MoneyProps } from "utils/types";
 
-    return (
-      <div className={getMoneyClass(questionsNumber, id)}>
-        <div className="money-item">
-          {getMoneyFromNumber(value)}
-          <MoneyIcon />
-        </div>
-      </div>
-    )
-  
-}
+import { ReactComponent as MoneyIcon } from "../../../images/Rectangle.svg";
 
-export default Money;
+export const Money: FC<MoneyProps> = ({ questionsNumber, value, id }) => (
+  <div className={getMoneyClass(questionsNumber, id)}>
+    <div className="money-item">
+      {getMoneyFromNumber(value)}
+      <MoneyIcon />
+    </div>
+  </div>
+);

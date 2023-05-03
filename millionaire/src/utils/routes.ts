@@ -1,5 +1,5 @@
 export const ROUTES = {
-    main: '/',
-    question: '/question',
-    final: '/final'
+  main: "/",
+  question: "/question",
+  final: "/final",
 };

@@ -1,28 +1,22 @@
-import React, { FC, useState } from 'react'
-import './mobile.css';
-import Progress from '../progress';
-import Hamburger from 'hamburger-react'
+import React, { FC, useState } from "react";
+import "./mobile.css";
+import Hamburger from "hamburger-react";
 
+import { Progress } from "../progress";
 
 interface ProgressProps {
-  questionsNumber: number
+  questionsNumber: number;
 }
 
+export const MobileMenu: FC<ProgressProps> = ({ questionsNumber }) => {
+  const [isOpen, setOpen] = useState(false);
 
-const MobileMenu: FC<ProgressProps> = ({ questionsNumber }) => {
-  const [isOpen, setOpen] = useState(false)
-  
   return (
     <div className="mobile-section">
       <div className="mobile-hamburger">
-        <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
+        <Hamburger size={20} toggle={setOpen} toggled={isOpen} />
       </div>
-      {isOpen && (
-        <Progress questionsNumber={questionsNumber} />
-      )}
+      {isOpen && <Progress questionsNumber={questionsNumber} />}
     </div>
-    
-  )
-}
-
-export default MobileMenu
+  );
+};

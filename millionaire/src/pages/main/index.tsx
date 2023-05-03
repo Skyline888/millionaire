@@ -1,13 +1,9 @@
-import React, { FC }  from 'react'
-import Layout from 'components/layout';
-import { LayoutType } from 'utils/types';
-import { ROUTES } from 'utils/routes';
+import React, { FC } from "react";
 
-const Main: FC = () => {
+import { Layout } from "components/layout";
+import { LayoutType } from "utils/types";
+import { ROUTES } from "utils/routes";
 
-  return (
-    <Layout type={LayoutType.MAIN} buttonText="Start" goTo={ROUTES.question} />
-  )
-}
-
-export default Main
+export const Main: FC = () => (
+  <Layout buttonText="Start" goTo={ROUTES.question} type={LayoutType.MAIN} />
+);
